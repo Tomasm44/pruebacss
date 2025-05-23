@@ -186,6 +186,19 @@ button {
     transform: scale(1.1);
   }
 
+.btn {
+    color: #0a1543;
+    border-radius: 20%;
+    padding: 0.2em 0.5em;
+    background-color: white;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #ccc;
+}
+
 /* Animación de aparición */
 @keyframes fadeIn {
     from {
@@ -238,6 +251,41 @@ img {
     color:#f1f1f1;
 }
 
+.card img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+  
+  .card img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .card img {
+    animation: popIn 1s ease forwards;
+    transform: perspective(800px) rotateX(0deg);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .card img:hover {
+    transform: perspective(800px) rotateX(8deg) translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+
+
+
 .content {
     display: flex;
     flex-direction: column;
@@ -273,60 +321,3 @@ footer {
   .footer-links {
     margin-top: 10px;
   }
-  
-
-
-
-
-    /* @media (max-width: 768px) {
-    body {
-        background-color: #0a1543;
-        display: grid;
-        grid-template-areas: 
-        "header"
-        "main"
-        "footer"
-        ;
-    } */
-
-    /* grid areas */
-    
-    /* header {
-        grid-area: header;
-    }
-    
-    main {
-        grid-area: main;
-    }
-    
-    footer {
-        grid-area: footer;
-    }
-  } */
-
-  /* @media (min-width: 1279px) {
-    body {
-        background-color: #0a1543;
-        display: grid;
-        grid-template-areas: 
-        "header main"
-        "header main"
-        "header footer"
-        ;
-    } */
-    /* grid areas */
-    
-    /* header {
-        grid-area: header;
-    }
-    
-    main {
-        grid-area: main;
-    }
-    
-    footer {
-        grid-area: footer;
-    }
-
-    
-  } */
